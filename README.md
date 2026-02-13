@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>کافه بلک | منوی دیجیتال</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: #0a0a0a;
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0, 71, 171, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(245, 130, 32, 0.1) 0%, transparent 40%);
+      color: #f0f0f0;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .logo-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      background: #000;
+      border: 3px solid #0047AB;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      box-shadow: 0 0 25px rgba(0, 71, 171, 0.4);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: #0047AB;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .menu-section {
+      background: rgba(20, 20, 20, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    .section-title {
+      background: linear-gradient(90deg, #0047AB, transparent);
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-title::after {
+      content: '';
+      height: 2px;
+      flex-grow: 1;
+      margin-right: 15px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .item:last-child { border-bottom: none; }
+
+    .item-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-name {
+      font-weight: 500;
+      color: #e0e0e0;
+      font-size: 1.05rem;
+    }
+
+    .item-price {
+      font-weight: 700;
+      color: #fff;
+      background: #1a1a1a;
+      padding: 4px 12px;
+      border-radius: 8px;
+      border: 1px solid #0047AB;
+      font-size: 1rem;
+    }
+
+    .item-price::after {
+      content: ' ت';
+      font-size: 0.7rem;
+      color: #888;
+      margin-right: 2px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    .insta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #f58220;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      box-shadow: 0 5px 20px rgba(245, 130, 32, 0.3);
+      transition: 0.3s;
+    }
+
+    .insta-link:active { transform: scale(0.95); }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #0047AB; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="logo">☕</div>
+      </div>
+      <h1>کافه بلک</h1>
+      <div class="subtitle">MENU</div>
+    </header>
+
+    <!-- قهوه‌ها -->
+    <div class="menu-section">
+      <div class="section-title">قهوه‌ها</div>
+      <div class="item">
+        <span class="item-name">اسپرسو سینگل</span>
+        <span class="item-price">۵۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">اسپرسو دبل</span>
+        <span class="item-price">۷۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">آمریکانو</span>
+        <span class="item-price">۸۵</span>
+      </div>
+      <div class="item">
+        <span class="item-name">لاته</span>
+        <span class="item-price">۱۰۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">موکا</span>
+        <span class="item-price">۱۲۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">آفاگاتو</span>
+        <span class="item-price">۹۵</span>
+      </div>
+      <div class="item">
+        <span class="item-name">کارامل ماکیاتو</span>
+        <span class="item-price">۱۲۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">کاپوچینو</span>
+        <span class="item-price">۹۵</span>
+      </div>
+      <div class="item">
+        <span class="item-name">آیس کافی</span>
+        <span class="item-price">۱۰۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">آیس لاته</span>
+        <span class="item-price">۱۰۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">آیس موکا</span>
+        <span class="item-price">۱۲۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">آیس کارامل</span>
+        <span class="item-price">۱۲۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">آیس آمریکانو</span>
+        <span class="item-price">۸۵</span>
+      </div>
+    </div>
+
+    <!-- نوشیدنی گرم -->
+    <div class="menu-section">
+      <div class="section-title">نوشیدنی گرم</div>
+      <div class="item">
+        <span class="item-name">چای سیاه</span>
+        <span class="item-price">۴۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">چای سبز</span>
+        <span class="item-price">۵۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">دمنوش آرامش</span>
+        <span class="item-price">۶۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">دمنوش سلامت</span>
+        <span class="item-price">۶۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">هات چاکلت</span>
+        <span class="item-price">۹۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">وایت چاکلت</span>
+        <span class="item-price">۹۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">چای ماسالا</span>
+        <span class="item-price">۹۵</span>
+      </div>
+      <div class="item">
+        <span class="item-name">چای کرک</span>
+        <span class="item-price">۱۲۰</span>
+      </div>
+    </div>
+
+    <!-- صبحانه -->
+    <div class="menu-section">
+      <div class="section-title">صبحانه</div>
+      <div class="item">
+        <span class="item-name">املت تک‌نفره</span>
+        <span class="item-price">۱۳۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">املت دونفره</span>
+        <span class="item-price">۱۷۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">نیمرو</span>
+        <span class="item-price">۹۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">سوسیس تخم‌مرغ</span>
+        <span class="item-price">۱۳۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">سینی ایرانی</span>
+        <span class="item-price">۱۵۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">سینی انگلیسی</span>
+        <span class="item-price">۲۳۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">عدسی</span>
+        <span class="item-price">۸۰</span>
+      </div>
+    </div>
+
+    <!-- عصرانه -->
+    <div class="menu-section">
+      <div class="section-title">عصرانه</div>
+      <div class="item">
+        <span class="item-name">اسنک مخصوص</span>
+        <span class="item-price">۱۴۵</span>
+      </div>
+      <div class="item">
+        <span class="item-name">اسنک رست‌بیف</span>
+        <span class="item-price">۱۸۵</span>
+      </div>
+      <div class="item">
+        <span class="item-name">اسنک مرغ</span>
+        <span class="item-price">۱۷۵</span>
+      </div>
+    </div>
+
+    <!-- شیک‌ها -->
+    <div class="menu-section">
+      <div class="section-title">شیک‌ها</div>
+      <div class="item">
+        <span class="item-name">شیک سوییتی رزبری</span>
+        <span class="item-price">۱۶۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">شیک نوتلا</span>
+        <span class="item-price">۱۴۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">شیک شکلات</span>
+        <span class="item-price">۱۲۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">شیک موز شکلات</span>
+        <span class="item-price">۱۴۰</span>
+      </div>
+    </div>
+
+    <!-- دسر -->
+    <div class="menu-section">
+      <div class="section-title">دسر</div>
+      <div class="item">
+        <span class="item-name">کیک شکلاتی</span>
+        <span class="item-price">۱۰۰</span>
+      </div>
+      <div class="item">
+        <span class="item-name">کیک روز</span>
+        <span class="item-price">۱۰۰</span>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://instagram.com/black.coffee.one" class="insta-link" target="_blank">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M18,5.75A1.25,1.25 0 0,0 16.75,7A1.25,1.25 0 0,0 18,8.25A1.25,1.25 0 0,0 19.25,7A1.25,1.25 0 0,0 18,5.75Z" />
+        </svg>
+        black.coffee.one
+      </a>
+    </footer>
+  </div>
+
+</body>
+</html>
